@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git brew pass screen rsync vagrant rbenv rake gem)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
+export PYTHON=$(which python)
 #Homebrew
 if [ -d /usr/local/bin ]; then
    export PATH=/usr/local/bin:$PATH

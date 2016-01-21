@@ -33,7 +33,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+source /usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/plugin/powerline.vim
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
