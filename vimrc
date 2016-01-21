@@ -22,7 +22,7 @@ set shiftwidth=4
 set expandtab
 set number
 set laststatus=2
-
+set backspace=2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
