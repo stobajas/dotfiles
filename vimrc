@@ -10,6 +10,7 @@ Plugin 'WolfgangMehner/vim-plugins.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 call vundle#end()           
 filetype plugin indent on  
@@ -33,7 +34,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 
-source /usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/plugin/powerline.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+if has('mac')
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+else 
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/plugin/powerline.vim
+endif
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
