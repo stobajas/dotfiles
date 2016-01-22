@@ -30,7 +30,7 @@ if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
 fi
 
 #powerline
-if [["$OSTYPE" == "darwin"*]]; then 
+if [[ "$OSTYPE" == "darwin"* ]]; then 
    source  /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 else
    source  /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
