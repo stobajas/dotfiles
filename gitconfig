@@ -1,0 +1,13 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  pager = less -F -X
+[push]
+  default = current
+[color]
+  ui = true
+[user]
+  name = Alexandre Leblanc
+  email = info@alexandre-leblanc.com 
+[help]
+  autocorrect = 5
