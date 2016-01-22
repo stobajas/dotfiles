@@ -9,7 +9,8 @@ ln -s $HOME/dracula-theme/zsh/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.
 
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 
 git clone git@github.com:powerline/fonts.git
-.$HOME/font/install.sh
+sh $HOME/font/install.sh
 
