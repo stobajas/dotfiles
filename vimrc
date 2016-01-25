@@ -4,8 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'WolfgangMehner/vim-plugins.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
@@ -48,4 +48,4 @@ else
 endif
 
 inoremap <Nul> <C-n>
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
