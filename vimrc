@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'WolfgangMehner/vim-plugins.git'
 Plugin 'tpope/vim-fugitive'
@@ -12,6 +12,9 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'fatih/vim-go'
+Plugin 'wting/rust.vim'
 call vundle#end()           
 filetype plugin indent on  
 syntax on
@@ -46,3 +49,4 @@ endif
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
+cnoremap <C-!> <"+>
