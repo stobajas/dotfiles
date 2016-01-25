@@ -48,4 +48,4 @@ else
 endif
 
 inoremap <Nul> <C-n>
-map <C-n> :NERDTreeTabsToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
