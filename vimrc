@@ -49,4 +49,3 @@ endif
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
-cnoremap <C-!> <"+>
