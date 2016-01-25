@@ -30,6 +30,7 @@ set backspace=2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set rnu
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -49,3 +50,5 @@ endif
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
+
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
