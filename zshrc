@@ -37,3 +37,15 @@ else
 fi
 
 bindkey -v
+
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+#alias
+alias v='vagrant version && vagrant global-status'
+alias vst='vagrant status'
+alias vup='vagrant up'
+alias vdo='vagrant halt'
+alias vssh='vagrant ssh'
+alias vkill='vagrant destroy'

@@ -31,12 +31,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set rnu
+set hlsearch
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
+let g:syntastic_c_include_dirs = ['/usr/include/ruby-2.0.0/ruby']
+let g:syntastic_c_include_dirs = ['/usr/include/ruby-2.0.0']
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
