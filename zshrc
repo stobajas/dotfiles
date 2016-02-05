@@ -4,7 +4,7 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git brew pass screen rsync vagrant rbenv rake gem)
+plugins=(git brew pass screen rsync vagrant rbenv rake gem bundler)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
