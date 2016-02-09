@@ -41,6 +41,8 @@ bindkey -v
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export MRUBY_ENGINE_NATIVE_TESTS=1
+
 
 #alias
 alias v='vagrant version && vagrant global-status'
@@ -49,3 +51,5 @@ alias vup='vagrant up'
 alias vdo='vagrant halt'
 alias vssh='vagrant ssh'
 alias vkill='vagrant destroy'
+
+alias test_script='for f in test/unit/script_*; do spring testunit $f; done'

@@ -40,6 +40,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 let g:syntastic_c_include_dirs = ['/usr/include/ruby-2.0.0/ruby']
 let g:syntastic_c_include_dirs = ['/usr/include/ruby-2.0.0']
+let g:syntastic_c_remove_include_errors = 1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -53,5 +54,7 @@ endif
 
 inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
+
+au BufRead,BufNewFile *.mrb setfiletype ruby
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
