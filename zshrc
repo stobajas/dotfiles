@@ -49,3 +49,5 @@ alias vup='vagrant up'
 alias vdo='vagrant halt'
 alias vssh='vagrant ssh'
 alias vkill='vagrant destroy'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias ber="bundle exec rake"

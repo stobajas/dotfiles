@@ -15,6 +15,7 @@ Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'fatih/vim-go'
 Plugin 'wting/rust.vim'
+Plugin 'rizzatti/dash.vim'
 call vundle#end()           
 filetype plugin indent on  
 syntax on
