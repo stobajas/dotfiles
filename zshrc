@@ -4,7 +4,7 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git brew pass screen rsync vagrant rbenv rake gem)
+plugins=(git brew pass screen rsync vagrant rbenv rake gem bundler)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
@@ -51,5 +51,6 @@ alias vup='vagrant up'
 alias vdo='vagrant halt'
 alias vssh='vagrant ssh'
 alias vkill='vagrant destroy'
-
 alias test_script='for f in test/unit/script_*; do spring testunit $f; done'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias ber="bundle exec rake"
