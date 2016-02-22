@@ -42,7 +42,7 @@ export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export MRUBY_ENGINE_NATIVE_TESTS=1
-
+export EDITOR=/usr/bin/vim
 
 #alias
 alias v='vagrant version && vagrant global-status'
@@ -53,4 +53,8 @@ alias vssh='vagrant ssh'
 alias vkill='vagrant destroy'
 alias test_script='for f in test/unit/script_*; do spring testunit $f; done'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gs="git status"
 alias ber="bundle exec rake"
+
+
+export PRY=1

@@ -16,6 +16,7 @@ rm $HOME/.gitconfig
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
 
 git clone git@github.com:powerline/fonts.git
 sh $HOME/fonts/install.sh

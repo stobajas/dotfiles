@@ -5,8 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'scrooloose/nerdtree'
 Plugin 'WolfgangMehner/vim-plugins.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -33,6 +33,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set rnu
 set hlsearch
+set mouse=a
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -59,3 +60,4 @@ map <C-n> :NERDTreeToggle<CR>
 au BufRead,BufNewFile *.mrb setfiletype ruby
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype c setlocal ts=2 sts=2 sw=2
