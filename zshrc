@@ -43,6 +43,16 @@ export NVM_DIR="/home/vagrant/.nvm"
 
 export MRUBY_ENGINE_NATIVE_TESTS=1
 export EDITOR=/usr/bin/vim
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+export PRY=1
+
+# aliases for Tmux
+ alias tmux='tmux -2'
+ alias ta='tmux attach -t'
+ alias tnew='tmux new -s'
+ alias tls='tmux ls'
+ alias tkill='tmux kill-session -t'
 
 #alias
 alias v='vagrant version && vagrant global-status'
@@ -57,4 +67,3 @@ alias gs="git status"
 alias ber="bundle exec rake"
 
 
-export PRY=1
