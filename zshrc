@@ -48,11 +48,11 @@ export VISUAL=$EDITOR
 export PRY=1
 
 # aliases for Tmux
- alias tmux='tmux -2'
- alias ta='tmux attach -t'
- alias tnew='tmux new -s'
- alias tls='tmux ls'
- alias tkill='tmux kill-session -t'
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
 
 #alias
 alias v='vagrant version && vagrant global-status'
@@ -65,5 +65,14 @@ alias test_script='for f in test/unit/script_*; do spring testunit $f; done'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs="git status"
 alias ber="bundle exec rake"
+alias bet="bundle exec spring testunit"
+alias bers='bundle exec rake spec'
 
 
+function test_all () {
+    for f in $1; do
+        if [[ $f == script* ]]; then
+            echo $f
+        fi
+    done
+} 
