@@ -15,11 +15,12 @@ fi
 #Homebrew
 if [ -d /usr/local/bin ]; then
     export PATH=/usr/local/bin:$PATH
-    export PATH=$PATH:/usr/local/sbin
+    export PATH="/usr/local/sbin:$PATH"
 fi
 
 #Homebrew man
 if [ -d /User/local/man ]; then 
+    echo "homebrew path"
     export MANPATH="/usr/local/man:$MANPATH"
 fi    
 
@@ -31,21 +32,21 @@ fi
 
 #powerline
 if [[ "$OSTYPE" == "darwin"* ]]; then 
-   source  /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+   if [ -d /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh ]; then
+       source  /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+   fi
 else
-   source  /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+   if [ -d /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh ];then
+       source  /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+   fi
 fi
 
 bindkey -v
 
-export NVM_DIR="/home/vagrant/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export MRUBY_ENGINE_NATIVE_TESTS=1
 export EDITOR=/usr/bin/vim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
-export PRY=1
 
 # aliases for Tmux
 alias tmux='tmux -2'
@@ -61,18 +62,8 @@ alias vup='vagrant up'
 alias vdo='vagrant halt'
 alias vssh='vagrant ssh'
 alias vkill='vagrant destroy'
-alias test_script='for f in test/unit/script_*; do spring testunit $f; done'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gs="git status"
+
 alias ber="bundle exec rake"
 alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
-
-function test_all () {
-    for f in $1; do
-        if [[ $f == script* ]]; then
-            echo $f
-        fi
-    done
-} 
