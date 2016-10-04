@@ -9,5 +9,6 @@
 [user]
   name = Alexandre Leblanc
   email = info@alexandre-leblanc.com 
+  signingkey = 70A20DF6 
 [help]
   autocorrect = 5

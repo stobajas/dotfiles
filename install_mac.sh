@@ -3,8 +3,7 @@ cd $HOME
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install zsh wget  python python3 nmap openssl openvpn p7zip pandoc ssh-copy-id
-brew install git htop 
+brew install zsh wget  python python3 nmap openssl openvpn p7zip pandoc ssh-copy-id git htop 
 brew install vim --with-perl --with-ruby --with-python3 --with-features=huge
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -20,6 +19,8 @@ rm $HOME/.gitconfig
 ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/vimrc $HOME/.ideavimrc
+
 
 git clone git@github.com:powerline/fonts.git
 sh $HOME/fonts/install.sh

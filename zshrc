@@ -6,14 +6,8 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git brew pass screen rsync vagrant rbenv rake gem bundler)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
-if [ -d $HOME/.gem/ruby/2.0.0 ]; then 
-    export GEM_PATH=/Users/macmata/.gem/ruby/2.0.0
-fi    
-
 #Homebrew
-if [ -d /usr/local/bin ]; then
+if [ -d /usr/local/Cellar ]; then
     export PATH=/usr/local/bin:$PATH
     export PATH="/usr/local/sbin:$PATH"
 fi
@@ -32,19 +26,19 @@ fi
 
 #powerline
 if [[ "$OSTYPE" == "darwin"* ]]; then 
-   if [ -d /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh ]; then
-       source  /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+   if [ -d /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh ]; then
+       source  /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
    fi
 else
-   if [ -d /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh ];then
-       source  /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+   if [ -d /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh ];then
+       source  /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
    fi
 fi
 
 bindkey -v
 
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
@@ -67,3 +61,5 @@ alias ber="bundle exec rake"
 alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

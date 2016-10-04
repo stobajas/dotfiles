@@ -1,5 +1,5 @@
-sudo apt-get install -y vim git zsh python-pip 
-sudo pip install powerline-status
+sudo apt-get update
+sudo apt-get install -y python3 python3-pip vim git htop tmux openjdk-7-jdk pass  
 
 cd $HOME
 
@@ -17,7 +17,9 @@ ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/dotfiles/vimrc $HOME/.ideavimrc
 
 git clone git@github.com:powerline/fonts.git
 sh $HOME/fonts/install.sh
 
+pip3 install powerline-status
