@@ -17,6 +17,7 @@ Plugin 'wting/rust.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'dracula/vim'
 Plugin 'junegunn/fzf'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()           
 
 filetype plugin indent on  
@@ -49,8 +50,6 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
 
-
-inoremap <Nul> <C-n>
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF
 
