@@ -28,10 +28,14 @@ fi
 if [[ "$OSTYPE" == "darwin"* ]]; then 
    if [ -d /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh ]; then
        source  /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+       PYTHON3_PACKAGES=/usr/local/lib/python3.5/site-packages/
+       export PYTHON3_PACKAGES 
    fi
 else
    if [ -d /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh ];then
        source  /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
+       PYTHON3_PACKAGES=/usr/local/lib/python3.5/dist-packages/
+       export PYTHON3_PACKAGES 
    fi
 fi
 

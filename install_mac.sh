@@ -25,9 +25,7 @@ ln -s $HOME/dotfiles/vimrc $HOME/.ideavimrc
 git clone git@github.com:powerline/fonts.git
 sh $HOME/fonts/install.sh
 
-sudo pip3 install powerline-status
+
 brew cask install iterm2 
-brew install neovim/neovim/neovim
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vimrc ~/.config/nvim/init.vim
+pip3 install powerline-status
 
