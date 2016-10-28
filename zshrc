@@ -4,7 +4,7 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(gpg git brew pass screen rsync vagrant rbenv rake gem bundler)
+plugins=(gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
 #Homebrew
 if [ -d /usr/local/Cellar ]; then
@@ -66,5 +66,6 @@ alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
 alias gpg="gpg2"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
