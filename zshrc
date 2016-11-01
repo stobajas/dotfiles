@@ -65,7 +65,10 @@ alias ber="bundle exec rake"
 alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
+alias gc="git commit"
+alias gaa="git add -A"
+
 alias gpg="gpg2"
 alias vim="nvim"
-
+alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
