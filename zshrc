@@ -1,8 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 
 plugins=(gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
@@ -24,25 +23,9 @@ if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
       PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" 
 fi
 
-#powerline
-if [[ "$OSTYPE" == "darwin"* ]]; then 
-   if [ -d /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh ]; then
-       source  /usr/local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
-       PYTHON3_PACKAGES=/usr/local/lib/python3.5/site-packages/
-       export PYTHON3_PACKAGES 
-   fi
-else
-   if [ -d /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh ];then
-       source  /usr/local/lib/python3.5/dist-packages/powerline/bindings/zsh/powerline.zsh
-       PYTHON3_PACKAGES=/usr/local/lib/python3.5/dist-packages/
-       export PYTHON3_PACKAGES 
-   fi
-fi
-
 bindkey -v
 
-
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vi
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
@@ -65,7 +48,11 @@ alias ber="bundle exec rake"
 alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
-alias gpg="gpg2"
-alias vim="nvim"
+alias gc="git commit"
+alias gaa="git add -A"
 
+alias gpg="gpg2"
+alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source $ZSH/oh-my-zsh.sh
