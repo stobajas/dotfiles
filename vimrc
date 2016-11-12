@@ -53,7 +53,7 @@ let g:fzf_layout = { 'down': '20%' }
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme= 'serene'
+let g:airline_theme= 'molokai'
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '

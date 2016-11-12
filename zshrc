@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="dracula"
 
-plugins=(gpg git pass screen rsync vagrant rbenv rake gem bundler)
+plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
 #Homebrew
 if [ -d /usr/local/Cellar ]; then
@@ -53,6 +53,5 @@ alias gaa="git add -A"
 
 alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 source $ZSH/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
