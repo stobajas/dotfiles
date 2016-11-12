@@ -5,31 +5,13 @@ ZSH_THEME="dracula"
 
 plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
-#Homebrew
-if [ -d /usr/local/Cellar ]; then
-    export PATH=/usr/local/bin:$PATH
-    export PATH="/usr/local/sbin:$PATH"
-fi
-
-#Homebrew man
-if [ -d /User/local/man ]; then 
-    echo "homebrew path"
-    export MANPATH="/usr/local/man:$MANPATH"
-fi    
-
-# Use gnu utils instead of os x
-if [ -d /usr/local/opt/coreutils/libexec/gnubin ]; then
-      MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-      PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" 
-fi
-
 bindkey -v
 
 export EDITOR=/usr/bin/vi
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-# aliases for Tmux
+#aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
 alias tnew='tmux new -s'
@@ -53,5 +35,9 @@ alias gaa="git add -A"
 
 alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
+
 source $ZSH/oh-my-zsh.sh
+source .config/base16-gnome-terminal/base16-default.dark.sh
+
+#must be the last line
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
