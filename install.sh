@@ -1,13 +1,14 @@
 sudo apt-get update
-sudo apt-get install -y python3 python3-pip vim git htop tmux openjdk-7-jdk pass  
+sudo apt-get install -y python3 python3-pip git htop tmux pass install checkinstall
+
 
 cd $HOME
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-git clone https://github.com/zenorocha/dracula-theme/
-ln -s $HOME/dracula-theme/zsh/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
+git clone https://github.com/dracula/zsh.git dracula-theme
+ln -s $HOME/dracula-theme/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
 
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.vimrc
@@ -22,4 +23,3 @@ ln -s $HOME/dotfiles/vimrc $HOME/.ideavimrc
 git clone git@github.com:powerline/fonts.git
 sh $HOME/fonts/install.sh
 
-sudo pip3 install powerline-status
