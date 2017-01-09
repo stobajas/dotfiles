@@ -37,7 +37,7 @@ alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 
 source $ZSH/oh-my-zsh.sh
-source .config/base16-gnome-terminal/base16-default.dark.sh
+
 
 #must be the last line
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

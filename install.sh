@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install -y python3 python3-pip git htop tmux pass install checkinstall python-dev python3-dev build-essential cmake
+sudo apt-get install -y zsh python3 python3-pip git htop tmux pass checkinstall python-dev python3-dev build-essential cmake gpgv2  
 
 
 cd $HOME
