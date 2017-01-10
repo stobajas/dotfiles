@@ -5,11 +5,11 @@ ZSH_THEME="dracula"
 
 plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
-bindkey -v
 
 export EDITOR=/usr/bin/vi
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+export KEYTIMEOUT=1
 
 #aliases for Tmux
 alias tmux='tmux -2'
@@ -37,7 +37,12 @@ alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 
 source $ZSH/oh-my-zsh.sh
-source .config/base16-gnome-terminal/base16-default.dark.sh
 
-#must be the last line
+#for settign vim binding, need to be before fzf 
+set -o vi 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+eval "$(rbenv init -)"
+
