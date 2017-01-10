@@ -37,6 +37,10 @@ alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 
 source $ZSH/oh-my-zsh.sh
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4fe4144afa5a4d091ad70af13463e6a8f41a9def
 
 #for settign vim binding, need to be before fzf 
 set -o vi 
