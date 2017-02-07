@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/syntastic.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'WolfgangMehner/vim-plugins.git'
 Plugin 'tpope/vim-fugitive'
@@ -15,7 +14,6 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'fatih/vim-go'
 Plugin 'wting/rust.vim'
-Plugin 'rizzatti/dash.vim'
 Plugin 'dracula/vim'
 Plugin 'junegunn/fzf'
 Plugin 'Valloric/YouCompleteMe'
@@ -36,17 +34,10 @@ set number
 set laststatus=2
 set backspace=2
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set rnu
 set hlsearch
 set mouse=a
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_w = 1
 
 let g:ycm_global_ycm_extra_conf = '~/dotfiles/ycm_extra_conf.py'  
 
@@ -77,3 +68,5 @@ noremap <C-l> <C-w>l
 au BufRead,BufNewFile *.mrb setfiletype ruby
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype dockerfile setlocal noet ci  pi sts=0 sw=4 ts=4
+autocmd Filetype make setlocal noet ci  pi sts=0 sw=4 ts=4

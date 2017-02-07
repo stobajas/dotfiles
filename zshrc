@@ -6,7 +6,7 @@ ZSH_THEME="dracula"
 plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler)
 
 
-export EDITOR=/usr/bin/vi
+export EDITOR=/usr/bin/vim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export KEYTIMEOUT=1
@@ -37,16 +37,9 @@ alias gpg="gpg2"
 alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
 
 source $ZSH/oh-my-zsh.sh
-<<<<<<< HEAD
-=======
-
->>>>>>> 4fe4144afa5a4d091ad70af13463e6a8f41a9def
 
 #for settign vim binding, need to be before fzf 
 set -o vi 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-eval "$(rbenv init -)"
 
