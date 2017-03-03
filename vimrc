@@ -19,6 +19,8 @@ Plugin 'junegunn/fzf'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/groovy.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 call vundle#end()           
 
 filetype plugin indent on  
@@ -66,7 +68,10 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 au BufRead,BufNewFile *.mrb setfiletype ruby
+au BufRead,BufNewFile jenkinsfile setfiletype groovy
 
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype dockerfile setlocal noet ci  pi sts=0 sw=4 ts=4
 autocmd Filetype make setlocal noet ci  pi sts=0 sw=4 ts=4
+autocmd Filetype unix setlocal noet ci  pi sts=0 sw=4 ts=4
+autocmd Filetype cfg setlocal noet ci  pi sts=0 sw=4 ts=4

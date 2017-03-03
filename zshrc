@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="dracula"
 
-plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler)
+plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler docker)
 
 
 export EDITOR=/usr/bin/vim
@@ -30,16 +30,25 @@ alias ber="bundle exec rake"
 alias bet="bundle exec spring testunit"
 alias bers='bundle exec rake spec'
 
+alias gs="git status"
 alias gc="git commit"
+alias gca="git commit --amend"
 alias gaa="git add -A"
 
 alias gpg="gpg2"
-alias bb="sh /home/aleblanc/sfl/.gerrit/build.sh"
+
+alias cqfdr="cqfd run"
 
 source $ZSH/oh-my-zsh.sh
 
-#for settign vim binding, need to be before fzf 
-set -o vi 
+#for settign vim binding, need to be before fzf
+set -o vi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+n() {
+    $EDITOR ~/notes/"$*".txt
+}
 
+nls() {
+    nls() { tree -CR --noreport ~/notes | awk '{ if ((NR > 1) gsub(/.txt/,"")); if (NF==1) print $1; else if (NF==2) print $2,$3; else if (NF==3) printf "  %s\n", $3 }' ;}
+}
