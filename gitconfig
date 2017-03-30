@@ -8,9 +8,15 @@
   ui = true
 [user]
   name = Alexandre Leblanc
-  email = info@alexandre-leblanc.com 
-  signingkey = 70A20DF6 
+  email = alexandre.leblanc@savoirefairelinux.com   
+  signingkey = 3B1C66CB
 [help]
-  autocorrect = 5
+  autocorrect = 2
 [gitreview]
 	remote = origin
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+

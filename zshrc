@@ -1,15 +1,22 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="dracula"
+ZSH_THEME="powerline"
 
 plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler docker)
 
-
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/vimx
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export KEYTIMEOUT=1
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export POWERLINE_HIDE_USER_NAME="true"
+export POWERLINE_HIDE_HOST_NAME="true"
+export POWERLINE_PATH="short"
+
+alias vi='vimx'
+alias vim='vimx'
 
 #aliases for Tmux
 alias tmux='tmux -2'
@@ -37,7 +44,7 @@ alias gaa="git add -A"
 
 alias gpg="gpg2"
 
-alias cqfdr="cqfd run"
+alias cqfdr="cqfd run make"
 
 source $ZSH/oh-my-zsh.sh
 

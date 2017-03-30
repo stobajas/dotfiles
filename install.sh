@@ -1,6 +1,6 @@
 sudo apt-get update
 
-#sudo apt-get install -y zsh python3 python3-pip git htop tmux pass checkinstall python-dev python3-dev build-essential cmake gpgv2  
+#sudo apt-get install -y zsh python3 python3-pip git htop tmux pass checkinstall python-dev python3-dev build-essential cmake gpgv2
 
 
 cd $HOME
@@ -15,11 +15,11 @@ rm -rf $HOME/.zshrc
 rm -rf $HOME/.vimrc
 rm -rf $HOME/.gitconfig
 
-ln -s $HOME/dotfiles/vimrc $HOME/.vimrc
-ln -s $HOME/dotfiles/zshrc $HOME/.zshrc
-ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
-ln -s $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/dotfiles/vimrc $HOME/.ideavimrc
+ln -sf $HOME/dotfiles/vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/dotfiles/vimrc $HOME/.ideavimrc
 
 git clone git@github.com:powerline/fonts.git ~/config
 sh ~/.config/fonts/install.sh
