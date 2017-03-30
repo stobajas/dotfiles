@@ -47,7 +47,7 @@ set laststatus=2
 set backspace=2
 
 set list
-set listchars=tab:>-
+set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
 
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
