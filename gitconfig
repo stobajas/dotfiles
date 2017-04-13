@@ -8,7 +8,7 @@
   ui = true
 [user]
   name = Alexandre Leblanc
-  email = alexandre.leblanc@savoirefairelinux.com   
+  email = alexandre.leblanc@savoirfairelinux.com
   signingkey = 3B1C66CB
 [help]
   autocorrect = 2
