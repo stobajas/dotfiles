@@ -15,6 +15,12 @@ Plugin 'bronson/vim-trailing-whitespace'
 " theme
 Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline-themes'
+
+" snippet
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 call vundle#end()
 
 filetype plugin indent on
