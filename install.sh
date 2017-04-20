@@ -1,19 +1,21 @@
-sudo apt-get update
-
-#sudo apt-get install -y zsh python3 python3-pip git htop tmux pass checkinstall python-dev python3-dev build-essential cmake gpgv2
-
-
 cd $HOME
 
+mkdir -p ~/.oh-my-zsh/custom/themes/
+
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 git clone https://github.com/dracula/zsh.git ~/.config/dracula-theme
-ln -s ~/.config/dracula-theme/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
+ln -sf ~/.config/dracula-theme/dracula.zsh-theme ~/.oh-my-zsh/custom/themes/dracula.zsh-theme
 
-rm -rf $HOME/.zshrc
-rm -rf $HOME/.vimrc
-rm -rf $HOME/.gitconfig
+git clone git@github.com:jeremyFreeAgent/oh-my-zsh-powerline-theme.git ~/.config/
+ln -sf ~/.conffig/oh-my-zsh-powerline-theme/Powerline.zsh-theme ~/.oh-my-zsh/custom/themes/powerline.zsh-theme
+
+git clone https://github.com/chriskempson/base16-gnome-terminal.git ~/.config/
+
+git clone git@github.com:powerline/fonts.git ~/config
+sh ~/.config/fonts/install.sh
 
 ln -sf $HOME/dotfiles/vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/zshrc $HOME/.zshrc
@@ -21,11 +23,8 @@ ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vimrc $HOME/.ideavimrc
 
-git clone git@github.com:powerline/fonts.git ~/config
-sh ~/.config/fonts/install.sh
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.config/fzf
+~/.config/fzf/install
 
-git clone https://github.com/chriskempson/base16-gnome-terminal.git ~/.config/base16-gnome-terminal
 
