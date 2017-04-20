@@ -35,7 +35,7 @@ set rnu
 set hlsearch
 set mouse=a
 
-" indend
+" Indend
 set noexpandtab
 set softtabstop=0
 set shiftwidth=4
@@ -43,6 +43,7 @@ set tabstop=4
 set laststatus=2
 set backspace=2
 
+" Set visual reference for tab
 set list
 set listchars=tab:>\ ,extends:\#
 
@@ -66,7 +67,7 @@ let g:airline_right_alt_sep = '|'
 
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-p> :FZF
+map <C-p> :FZF<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
