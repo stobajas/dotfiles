@@ -8,7 +8,10 @@ Plugin 'gmarik/Vundle.vim'
 
 " core functinality
 Plugin 'junegunn/fzf'
+
+"  YCM also provide basic linter
 Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 
@@ -18,14 +21,6 @@ Plugin 'tpope/vim-fugitive' " Git wapper for vim
 Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline-themes'
 
-" snippet
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
-" coding style
-Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 
 filetype plugin indent on
@@ -42,14 +37,11 @@ set mouse=a
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%{fugitive#statusline()}
-set statusline+=%*
-set statusline+=%{SyntasticStatuslineFlag()}
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_c_compiler = 'ycm'
 
 " Indend
 set noexpandtab
@@ -81,11 +73,10 @@ let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
 
-
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
 
-" GoTo defini in include
+" GoTo definition in include
 map <C-g> :YcmCompleter GoTo<CR>
 
 noremap <C-h> <C-w>h
