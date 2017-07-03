@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerline"
 
-plugins=(zsh gpg git pass screen rsync vagrant rbenv rake gem bundler docker)
+plugins=(zsh gpg git pass screen rsync vagrant docker dnf python tig)
 
 export EDITOR=/usr/bin/vimx
 export USE_EDITOR=$EDITOR

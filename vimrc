@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 
 Plugin 'tpope/vim-fugitive' " Git wapper for vim
+Plugin 'scrooloose/nerdtree'
 
 " theme
 Plugin 'dracula/vim'
