@@ -8,10 +8,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " core functinality
 Plugin 'junegunn/fzf'
-
-"  YCM also provide basic linter
+Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 
@@ -38,11 +36,6 @@ set mouse=a
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%{fugitive#statusline()}
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " Indend
 set noexpandtab

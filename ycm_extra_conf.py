@@ -16,8 +16,9 @@ BASE_FLAGS = [
         '-DNDEBUG',
         '-std=c++11',
         '-xc++',
-        '-I/usr/lib/'
-        '-I/usr/include/'
+        '-I/usr/lib/',
+        '-I/usr/include/',
+        '-I/usr/src/kernels/'
         ]
 
 SOURCE_EXTENSIONS = [
