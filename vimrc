@@ -67,11 +67,13 @@ let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
 
-map <C-n> :NERDTreeToggle<CR>
-map <C-p> :FZF<CR>
+let g:ale_cpp_clang_options = '-std=c++11 -Wall'
 
-" GoTo definition in include
-map <C-g> :YcmCompleter GoTo<CR>
+map <C-N> :NERDTreeToggle<CR>
+map <C-P> :FZF<CR>
+
+map <S-M> :YcmCompleter GoToDefinition<CR>
+map <S-N> :YcmCompleter GoTo<CR>
 
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j

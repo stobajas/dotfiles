@@ -11,6 +11,9 @@ export VISUAL=$EDITOR
 export KEYTIMEOUT=1
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PYTHONPATH="${PYTHONPATH}:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/local/lib/python3.6/site-packages"
+
+# no need to ./myapp all the time
 export POWERLINE_HIDE_USER_NAME="true"
 export POWERLINE_HIDE_HOST_NAME="true"
 export POWERLINE_DISABLE_RPROMPT="true"
@@ -76,3 +79,5 @@ function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 function sshproxy () { ssh -D 8080 -f -C -q -N aleblanc@mtl.savoirfairelinux.net; }
 
 source $HOME/.gtestrc
+
+
