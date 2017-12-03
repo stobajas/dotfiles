@@ -10,7 +10,7 @@ git clone https://github.com/dracula/zsh.git ~/.config/dracula-theme
 ln -sf ~/.config/dracula-theme/dracula.zsh-theme ~/.oh-my-zsh/custom/themes/dracula.zsh-theme
 
 git clone git@github.com:jeremyFreeAgent/oh-my-zsh-powerline-theme.git ~/.config/oh-my-zsh-powerline-theme
-ln -sf ~/.config/oh-my-zsh-powerline-theme/Powerline.zsh-theme ~/.oh-my-zsh/custom/themes/powerline.zsh-theme
+ln -sf ~/.config/oh-my-zsh-powerline-theme/powerline.zsh-theme ~/.oh-my-zsh/custom/themes/powerline.zsh-theme
 
 git clone https://github.com/chriskempson/base16-gnome-terminal.git ~/.config/base16-gnome-terminal
 
