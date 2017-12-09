@@ -1,17 +1,16 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="powerline"
+ZSH_THEME="dracula"
 
 plugins=(zsh gpg git pass screen rsync vagrant docker dnf python tig)
 
-export EDITOR=/usr/bin/vimx
+export EDITOR=/usr/bin/vim
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export KEYTIMEOUT=1
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export PYTHONPATH="${PYTHONPATH}:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/local/lib/python3.6/site-packages"
 
 # no need to ./myapp all the time
 export POWERLINE_HIDE_USER_NAME="true"
@@ -20,8 +19,8 @@ export POWERLINE_DISABLE_RPROMPT="true"
 export POWERLINE_DETECT_SSH="true"
 export POWERLINE_PATH="short"
 
-alias vi='vimx'
-alias vim='vimx'
+alias vi='vim'
+alias vim='vim'
 alias grd="git review -d"
 alias gs="git status"
 alias gc="git commit"
@@ -76,8 +75,4 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 
-function sshproxy () { ssh -D 8080 -f -C -q -N aleblanc@mtl.savoirfairelinux.net; }
-
-source $HOME/.gtestrc
-
-
+function sshproxy () { ssh -D 8080 -f -C -q -N "$USER"@mtl.savoirfairelinux.net; }
