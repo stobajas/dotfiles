@@ -12,6 +12,7 @@ Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'tpope/vim-fugitive' " Git wapper for vim
 Plugin 'scrooloose/nerdtree'
@@ -50,6 +51,7 @@ set list
 set listchars=tab:>\ ,extends:\#
 
 let g:ycm_global_ycm_extra_conf = '~/dotfiles/ycm_extra_conf.py'
+let g:ycm_goto_buffer_command = 'new-tab'
 
 let g:fzf_layout = { 'down': '20%' }
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
@@ -68,6 +70,9 @@ let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
 
 let g:ale_cpp_clang_options = '-std=c++11 -Wall'
+let g:ale_echo_msg_error_str = 'Ale Error'
+let g:ale_echo_msg_warning_str = 'Ale Warning'
+
 
 map <C-N> :NERDTreeToggle<CR>
 map <C-P> :FZF<CR>

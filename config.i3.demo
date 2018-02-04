@@ -1,0 +1,144 @@
+#font xft:Inconsolata Bold 10
+font pango:Inconsolata, Icons 12
+set $mod Mod4
+floating_modifier $mod
+
+set $i3blocks $PROJECTS_HOME/i3blocks
+
+# Simple shortcuts (mainly moves or app launchers)
+bindsym $mod+1      workspace number 1
+bindsym $mod+2      workspace number 2
+bindsym $mod+3      workspace number 3
+bindsym $mod+4      workspace number 4
+bindsym $mod+5      workspace number 5
+bindsym $mod+6      workspace number 6
+bindsym $mod+7      workspace number 7
+bindsym $mod+8      workspace number 8
+bindsym $mod+Down   focus down
+bindsym $mod+Left   focus left
+bindsym $mod+Print  exec gnome-screenshot -a
+bindsym $mod+Right  focus right
+bindsym $mod+Tab    workspace next_on_output
+bindsym $mod+Up     focus up
+bindsym $mod+a      focus parent
+bindsym $mod+b      split horizontal
+bindsym $mod+c      exec gnome-calculator
+bindsym $mod+e      exec nautilus
+bindsym $mod+f      fullscreen
+bindsym $mod+g      exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+bindsym $mod+h      focus left
+bindsym $mod+j      focus down
+bindsym $mod+k      focus up
+bindsym $mod+l      focus right
+bindsym $mod+m      bar mode toggle
+bindsym $mod+n      exec i3-new-workspace
+bindsym $mod+q      kill
+bindsym $mod+r      mode "resize"
+bindsym $mod+s      scratchpad show
+bindsym $mod+space  layout toggle
+bindsym $mod+t      exec gnome-terminal
+bindsym $mod+u      [urgent="oldest"] focus
+bindsym $mod+v      split vertical
+bindsym $mod+w      mode "web"
+bindsym $mod+x      exec dmenu_run
+
+# Complex shortcuts (mainly modifiers)
+bindsym $mod+Shift+1     move container to workspace number 1
+bindsym $mod+Shift+2     move container to workspace number 2
+bindsym $mod+Shift+3     move container to workspace number 3
+bindsym $mod+Shift+4     move container to workspace number 4
+bindsym $mod+Shift+5     move container to workspace number 5
+bindsym $mod+Shift+6     move container to workspace number 6
+bindsym $mod+Shift+7     move container to workspace number 7
+bindsym $mod+Shift+8     move container to workspace number 8
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Tab   workspace prev_on_output
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+c     reload
+bindsym $mod+Shift+e     exec i3-msg exit
+bindsym $mod+Shift+f     floating toggle
+bindsym $mod+Shift+h     move left
+bindsym $mod+Shift+j     move down
+bindsym $mod+Shift+k     move up
+bindsym $mod+Shift+l     move right
+bindsym $mod+Shift+m     exec monitor
+bindsym $mod+Shift+n     exec i3-rename-workspace
+bindsym $mod+Shift+q     exec poweroff
+bindsym $mod+Shift+r     restart
+bindsym $mod+Shift+s     move scratchpad
+bindsym $mod+Shift+w     move workspace to output right; move workspace to output down
+bindsym $mod+Shift+x     exec physlock
+
+# Special keys
+bindsym --release Caps_Lock            exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock             exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release XF86AudioMute        exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume           exec BLOCK_BUTTON=5 $i3blocks/scripts/volume
+bindsym XF86AudioMute                  exec BLOCK_BUTTON=3 $i3blocks/scripts/volume
+bindsym XF86AudioRaiseVolume           exec BLOCK_BUTTON=4 $i3blocks/scripts/volume
+
+
+# App rules
+for_window [class=".*"] border pixel 1
+for_window [class="Nautilus"] floating enable
+for_window [title="Calculator"] floating enable
+
+# Modes
+mode "resize" {
+  bindsym Down   resize shrink height 10 px or 10 ppt
+  bindsym Left   resize grow   width  10 px or 10 ppt
+  bindsym Right  resize shrink width  10 px or 10 ppt
+  bindsym Up     resize grow   height 10 px or 10 ppt
+  bindsym h      resize grow   width  10 px or 10 ppt
+  bindsym j      resize shrink height 10 px or 10 ppt
+  bindsym k      resize grow   height 10 px or 10 ppt
+  bindsym l      resize shrink width  10 px or 10 ppt
+
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
+mode "web" {
+  set $default firefox
+
+  bindsym $mod+w exec $default                                          ; mode "default"
+  bindsym c      exec chromium                                          ; mode "default"
+  bindsym f      exec firefox                                           ; mode "default"
+  bindsym g      exec google-chrome-stable                              ; mode "default"
+  bindsym p      exec firefox --private-window https://duckduckgo.com   ; mode "default"
+  bindsym t      exec tor-browser-en                                    ; mode "default"
+
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
+# Bars
+bar {
+  output VGA-1
+  position top
+  status_command $i3blocks/i3blocks -c ~/.config/i3blocks/zii/config
+}
+
+bar {
+  output DP-2
+  position top
+  status_command $i3blocks/i3blocks -c ~/.config/i3blocks/zii/config
+}
+
+bar {
+  output LVDS-1
+  position top
+  status_command $i3blocks/i3blocks -c ~/.config/i3blocks/zii/config
+}
+
+bar {
+  position bottom
+  workspace_buttons no
+  status_command $i3blocks/i3blocks -vvv 2>/tmp/i3blocks.err
+}
+
+# Startup apps and conf

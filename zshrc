@@ -5,12 +5,14 @@ ZSH_THEME="dracula"
 
 plugins=(zsh gpg git pass screen rsync vagrant docker dnf python tig)
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/vimx
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export KEYTIMEOUT=1
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PYTHON_BIN_PATH="$(python -m site --user-base)/bin"
+export PATH="$PATH:$PYTHON_BIN_PATH"
 
 # no need to ./myapp all the time
 export POWERLINE_HIDE_USER_NAME="true"
@@ -19,8 +21,8 @@ export POWERLINE_DISABLE_RPROMPT="true"
 export POWERLINE_DETECT_SSH="true"
 export POWERLINE_PATH="short"
 
-alias vi='vim'
-alias vim='vim'
+alias vi='vimx'
+alias vim='vimx'
 alias grd="git review -d"
 alias gs="git status"
 alias gc="git commit"
@@ -29,8 +31,8 @@ alias gaa="git add -A"
 alias gpg="gpg2"
 alias cqfdr="cqfd run make"
 
-
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 set -o vi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
