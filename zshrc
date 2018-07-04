@@ -23,6 +23,8 @@ export POWERLINE_PATH="short"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.profile
+source ~/dotfiles/alias_
+source ~/dotfiles/functions_
 set -o vi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
