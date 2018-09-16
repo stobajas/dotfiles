@@ -10,18 +10,6 @@ if [ -f /usr/bin/vimx ]; then
 	export VISUAL=$EDITOR
 fi
 
-if [ -f `which powerline-daemon` ]; then
-	powerline-daemon -q
-	POWERLINE_BASH_CONTINUATION=1
-	POWERLINE_BASH_SELECT=1
-	source /usr/share/powerline/bash/powerline.sh
-	export POWERLINE_HIDE_USER_NAME="true"
-	export POWERLINE_HIDE_HOST_NAME="true"
-	export POWERLINE_DISABLE_RPROMPT="true"
-	export POWERLINE_DETECT_SSH="true"
-	export POWERLINE_PATH="short"
-fi
-
 if [ USE_SMART_KEY ]; then
 	export GPG_TTY=$(tty)
 	gpg-connect-agent updatestartuptty /bye
