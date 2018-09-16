@@ -16,10 +16,18 @@ Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'tpope/vim-fugitive' " Git wapper for vim
 Plugin 'scrooloose/nerdtree'
+Plugin 'Nopik/vim-nerdtree-direnter'
 
 " theme
 Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline-themes'
+
+" framework/lang
+Plugin 'kergoth/vim-bitbake'
+
+" snippet
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
@@ -32,6 +40,8 @@ set number
 set rnu
 set hlsearch
 set mouse=a
+set wildmenu
+set wildmode=longest:full,full
 
 
 set statusline+=%#warningmsg#
@@ -52,9 +62,14 @@ set listchars=tab:>\ ,extends:\#
 
 let g:ycm_global_ycm_extra_conf = '~/dotfiles/ycm_extra_conf.py'
 let g:ycm_goto_buffer_command = 'new-tab'
+let g:ycm_show_diagnostics_ui = 0
 
 let g:fzf_layout = { 'down': '20%' }
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
+
+let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeMapOpenVSplit='<ctrl-v>'
+let NERDTreeMapOpenSplit='<ctrl-x>'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme= 'molokai'
@@ -73,12 +88,24 @@ let g:ale_cpp_clang_options = '-std=c++11 -Wall'
 let g:ale_echo_msg_error_str = 'Ale Error'
 let g:ale_echo_msg_warning_str = 'Ale Warning'
 
+let g:ale_cpp_clangtidy_options = '-Wall -std=c++11 -x c++'
+let g:ale_cpp_clangcheck_options = '-- -Wall -std=c++11 -x c++'
+let g:ale_cpp_clang_options = '-Wall -std=c++11 -x c++'
+let g:ale_cpp_gcc_options = '-Wall -std=c++11 -x c++'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-t>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 map <C-N> :NERDTreeToggle<CR>
 map <C-P> :FZF<CR>
 
 map <S-M> :YcmCompleter GoToDefinition<CR>
-map <S-N> :YcmCompleter GoTo<CR>
+map <S-N> :YcmCompleter GoToDeclaration<CR>
 
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
