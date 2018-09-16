@@ -10,13 +10,5 @@ if [ -f /usr/bin/vimx ]; then
 	export VISUAL=$EDITOR
 fi
 
-if [ USE_SMART_KEY ]; then
-	export GPG_TTY=$(tty)
-	gpg-connect-agent updatestartuptty /bye
-	unset SSH_AGENT_PID
-	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-fi
-
 [ -f ~/.gtestrc ]  && source ~/.gtestrc
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

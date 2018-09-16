@@ -19,6 +19,7 @@ ln -sf $HOME/dotfiles/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vimrc $HOME/.ideavimrc
 ln -sf $HOME/dotfiles/Xmodmap $HOME/.Xmodmap
 ln -sf $HOME/dotfiles/profile $HOME/.profile
+ln -sf $HOME/dotfiles/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 
 ~/.config/fzf/install
 ~/.config/fonts/install.sh

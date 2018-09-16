@@ -29,6 +29,8 @@ Plugin 'kergoth/vim-bitbake'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 
+"coding style
+Plugin 'vivien/vim-linux-coding-style'
 call vundle#end()
 
 filetype plugin indent on
@@ -43,6 +45,8 @@ set mouse=a
 set wildmenu
 set wildmode=longest:full,full
 
+" deactivate preview
+set completeopt-=preview
 
 set statusline+=%#warningmsg#
 set statusline+=%*
@@ -63,6 +67,7 @@ set listchars=tab:>\ ,extends:\#
 let g:ycm_global_ycm_extra_conf = '~/dotfiles/ycm_extra_conf.py'
 let g:ycm_goto_buffer_command = 'new-tab'
 let g:ycm_show_diagnostics_ui = 0
+let g:ycm_add_preview_to_completeopt = 0
 
 let g:fzf_layout = { 'down': '20%' }
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }

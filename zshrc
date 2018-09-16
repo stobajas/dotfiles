@@ -20,4 +20,5 @@ source ~/dotfiles/functions_
 source ~/dotfiles/common_
 source ~/dotfiles/path_
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 set -o vi
