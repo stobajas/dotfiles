@@ -1,0 +1,40 @@
+if [ -f ~/.rbenv ]; then
+	eval "$(rbenv init -)"
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+fi
+
+if [ -f /usr/bin/vimx ]; then
+	export EDITOR=/usr/bin/vimx
+	export USE_EDITOR=$EDITOR
+	export VISUAL=$EDITOR
+fi
+
+if [ -f `which powerline-daemon` ]; then
+	powerline-daemon -q
+	POWERLINE_BASH_CONTINUATION=1
+	POWERLINE_BASH_SELECT=1
+	source /usr/share/powerline/bash/powerline.sh
+	export POWERLINE_HIDE_USER_NAME="true"
+	export POWERLINE_HIDE_HOST_NAME="true"
+	export POWERLINE_DISABLE_RPROMPT="true"
+	export POWERLINE_DETECT_SSH="true"
+	export POWERLINE_PATH="short"
+fi
+
+if [ USE_SMART_KEY ]
+	GPG_TTY=$(tty)
+	export GPG_TTY
+	if [ -z "$GPG_AGENT_INFO" ]; then
+		eval "$(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)"
+	fi
+
+	if [ -z "$SSH_AUTH_SOCK" ]; then
+		SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+		export SSH_AUTH_SOCK
+	fi
+fi
+
+[ -f ~/.gtestrc ]  && source ~/.gtestrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
