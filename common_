@@ -22,17 +22,11 @@ if [ -f `which powerline-daemon` ]; then
 	export POWERLINE_PATH="short"
 fi
 
-if [ USE_SMART_KEY ]
-	GPG_TTY=$(tty)
-	export GPG_TTY
-	if [ -z "$GPG_AGENT_INFO" ]; then
-		eval "$(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)"
-	fi
-
-	if [ -z "$SSH_AUTH_SOCK" ]; then
-		SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-		export SSH_AUTH_SOCK
-	fi
+if [ USE_SMART_KEY ]; then
+	export GPG_TTY=$(tty)
+	gpg-connect-agent updatestartuptty /bye
+	unset SSH_AGENT_PID
+	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 fi
 
 [ -f ~/.gtestrc ]  && source ~/.gtestrc
