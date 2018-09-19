@@ -1,0 +1,11 @@
+[sendemail]
+	smtpEncryption = ssl
+	smtpServer = mail.savoirfairelinux.com
+	smtpAuth = PLAIN
+	smtpUser = alexandre.leblanc@savoirfairelinux.com
+	smtpServerPort = 465
+[user]
+	name = Alexandre Leblanc
+	email = info@alexandre-leblanc.com
+[core]
+	excludesfile = /home/macmata/.gitignore_global

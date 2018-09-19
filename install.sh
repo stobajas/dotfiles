@@ -20,6 +20,8 @@ ln -sf $HOME/dotfiles/vimrc $HOME/.ideavimrc
 ln -sf $HOME/dotfiles/Xmodmap $HOME/.Xmodmap
 ln -sf $HOME/dotfiles/profile $HOME/.profile
 ln -sf $HOME/dotfiles/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/gitignore_global $HOME/.gitignore_global
 
 ~/.config/fzf/install
 ~/.config/fonts/install.sh
