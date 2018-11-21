@@ -21,3 +21,4 @@ source ~/dotfiles/alias_
 source ~/dotfiles/functions_
 source ~/dotfiles/common_
 source ~/dotfiles/path_
+source ~/dotfiles/do_not_commit_
