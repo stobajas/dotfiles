@@ -45,6 +45,9 @@ set mouse=a
 set wildmenu
 set wildmode=longest:full,full
 
+" set spellcheck for en_us
+set spell spelllang=en_us
+
 " deactivate preview
 set completeopt-=preview
 
