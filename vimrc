@@ -50,12 +50,9 @@ set hlsearch
 set mouse=a
 set wildmenu
 set wildmode=longest:full,full
-set noswapfile
 
 "  spellcheck english
 "  z= to get word list
-set spell
-
 " set spellcheck for en_us
 set spell spelllang=en_us
 
