@@ -56,6 +56,9 @@ set noswapfile
 "  z= to get word list
 set spell
 
+" set spellcheck for en_us
+set spell spelllang=en_us
+
 " deactivate preview
 set completeopt-=preview
 
@@ -70,6 +73,11 @@ set shiftwidth=4
 set tabstop=4
 set laststatus=2
 set backspace=2
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set noswapfile
+set nowb
 
 " Set visual reference for tab
 set list
@@ -133,3 +141,4 @@ noremap <C-l> <C-w>l
 
 au BufRead,BufNewFile *.mrb setfiletype ruby
 au BufRead,BufNewFile jenkinsfile setfiletype groovy
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
