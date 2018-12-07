@@ -31,6 +31,12 @@ Plugin 'honza/vim-snippets'
 
 "coding style
 Plugin 'vivien/vim-linux-coding-style'
+
+"
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -44,6 +50,11 @@ set hlsearch
 set mouse=a
 set wildmenu
 set wildmode=longest:full,full
+set noswapfile
+
+"  spellcheck english
+"  z= to get word list
+set spell
 
 " deactivate preview
 set completeopt-=preview
@@ -106,8 +117,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+let g:vim_ctags__jump_behaviors = { 'before': 'tabnew', 'after': 'norm zvzz' }
+
+nmap <C-B> :TagbarToggle<CR>
 map <C-N> :NERDTreeToggle<CR>
-map <C-P> :FZF<CR>
+map <C-F> :FZF<CR>
 
 map <S-M> :YcmCompleter GoToDefinition<CR>
 map <S-N> :YcmCompleter GoToDeclaration<CR>
