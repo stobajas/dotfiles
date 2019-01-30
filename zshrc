@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="dracula"
+ZSH_THEME="robbyrussell"
 # required for gpg agent config
 GPG_TTY=$(tty)
 
@@ -29,4 +29,3 @@ source ~/dotfiles/path_
 #must be in that order
 set -o vi
 source ~/.fzf.zsh
-
